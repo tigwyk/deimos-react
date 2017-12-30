@@ -1,21 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import 'material-components-web/material-components-web.scss';
+
+const PATH = 'https://deimos2147.herokuapp.com/api/v1/';
 
 class App extends Component {
   render() {
+	  const { msg } = this.state;
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+	<h1>{msg}</h1>
       </div>
     );
   }
+
+  componentDidMount() {
+	  fetch(PATH, {
+	  	headers: {
+			'Content-Type': 'application/json',
+			'Accept': 'application/json'
+		}
+	  })
+		  .then(response => response.json())
+		  .then(data => this.SetState({ msg: data.msg }));
+		}
 }
 
 export default App;
