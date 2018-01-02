@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import 'material-components-web/material-components-web.scss';
+import "material-components-web/material-components-web.scss";
+import LayoutGrid from "@react-mdc/layout-grid";
 
 const PATH = 'https://deimos2147.herokuapp.com/api/v1/';
 
@@ -16,8 +17,29 @@ class App extends Component {
 	  const { data } = this.state;
       return (
       <div className="App">
-	<h1>{data.name}</h1>
-      </div>
+		<LayoutGrid style={{ background: "#9c9c9c" }}>
+      <LayoutGrid.Cell span={1}
+        style={{
+	              background: "#3d3d3d",
+	            color: "white",
+	                  display: "flex",
+	                  justifyContent: "center",
+	                  alignItems: "center",
+	            padding: 32,
+	        }} >{data.name}
+		</LayoutGrid.Cell>
+
+    <LayoutGrid.Cell span={2}
+        style={{
+	                background: "#3d3d3d",
+	            color: "white",
+		            display: "flex",
+		                justifyContent: "center",
+			            alignItems: "center",
+			                padding: 32,
+			            }} >{data.hps}/{data.max_hps}</LayoutGrid.Cell>
+</LayoutGrid>
+	</div>
     );
   }
 
