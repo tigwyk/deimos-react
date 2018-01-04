@@ -18,7 +18,7 @@ class App extends Component {
       return (
       <div className="App">
 		<LayoutGrid style={{ background: "#9c9c9c" }}>
-      <LayoutGrid.Cell span={1}
+      <LayoutGrid.Cell span={8}
         style={{
 	              background: "#3d3d3d",
 	            color: "white",
@@ -29,7 +29,7 @@ class App extends Component {
 	        }} >{data.name}
 		</LayoutGrid.Cell>
 
-    <LayoutGrid.Cell span={2}
+    <LayoutGrid.Cell span={4}
         style={{
 	                background: "#3d3d3d",
 	            color: "white",
