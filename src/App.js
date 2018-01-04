@@ -3,7 +3,7 @@ import './App.css';
 import "material-components-web/material-components-web.scss";
 import LayoutGrid from "@react-mdc/layout-grid";
 
-const PATH = 'https://deimos2147.herokuapp.com/api/v1/';
+const PATH = 'api/v1/';
 
 class App extends Component {
 	constructor(props) {
