@@ -17,36 +17,10 @@ class App extends Component {
 	  const { data } = this.state;
       return (
       <div className="App">
-		<LayoutGrid style={{ background: "#9c9c9c" }}>
-      <LayoutGrid.Cell span={6}
-        style={{
-	              background: "#3d3d3d",
-	            color: "white",
-	                  display: "flex",
-	                  justifyContent: "center",
-	                  alignItems: "center",
-	            padding: 32,
-	        }} >{data.name}
-		</LayoutGrid.Cell>
-
-    <LayoutGrid.Cell span={4}
-        style={{
-	                background: "#3d3d3d",
-	            color: "white",
-		            display: "flex",
-		                justifyContent: "center",
-			            alignItems: "center",
-			                padding: 32,
-			            }} >{data.hps}/{data.max_hps}</LayoutGrid.Cell>
-<LayoutGrid.Cell span={2}
-        style={{
-		                        background: "#3d3d3d",
-		                    color: "white",
-					                            display: "flex",
-					                                    justifyContent: "center",
-									                                        alignItems: "center",
-										                                            padding: 32,
-	}} >${data.credits}</LayoutGrid.Cell>
+      <LayoutGrid style={{ width: "720px" }}>
+      <LayoutGrid.Cell span={6}>{data.name}</LayoutGrid.Cell>
+    <LayoutGrid.Cell span={4}>{data.hps}/{data.max_hps}</LayoutGrid.Cell>
+<LayoutGrid.Cell span={2}>${data.credits}</LayoutGrid.Cell>
 	</LayoutGrid>
 	</div>
     );
